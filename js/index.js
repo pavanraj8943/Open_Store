@@ -10,8 +10,8 @@ async function fetchData() {
             <img src="${ele.thumbnail}">
             <a href="./product.html?id=${ele.id}">
             <h1>${ele.title}</h1>
-            <p>${ele.price}</p>
-            <p>${ele.rating}</p>
+            <p>Price: <span id="down">₹</span>${ele.price}</p>
+            <p>${ele.rating}<span> ⭐</span></p>
             </a>
                </div>
          
@@ -24,4 +24,5 @@ async function fetchData() {
 
     }
 }
+
 fetchData()

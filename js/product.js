@@ -42,6 +42,7 @@ const reviews = [
         </div>
       </div>
     `).join("");
+
     const priceINR = (data.price * 83).toLocaleString();
     document.title = `${data.title} | My Store`;
     document.getElementById("product").innerHTML = `

@@ -8,12 +8,13 @@ async function fetchData() {
             str += `
              <div class="card">
             <img src="${ele.thumbnail}">
-            <a href="./product.html/?id=${ele.id}">
+            <a href="./product.html?id=${ele.id}">
             <h1>${ele.title}</h1>
             <p>${ele.price}</p>
-            <p>${ele.rating}
+            <p>${ele.rating}</p>
+            </a>
                </div>
-            <a>
+         
             `
         });
         document.getElementById("cards").innerHTML = str

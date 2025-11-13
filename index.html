@@ -2,35 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open_Store</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open_Store</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+  <div class="main">
+    <nav>
+      <a href="#" class="logo">Open_STORE</a>
 
-    <div class="main">
-        <nav>
-            <a href="#" class="logo">Open_Store</a>
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search products...">
+        <button id="searchBtn">Search</button>
+      </div>
 
-            <div class="search-box">
-                <input type="text" placeholder="Search products...">
-                <button>Search</button>
-            </div>
-            <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">Login</a>
-            </div>
-        </nav>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Login</a>
+      </div>
+    </nav>
 
-        <div class="display" id="cards">
-            
-        </div>
-    </div>
+    <div id="categories" class="categories"></div>
 
+    <div class="display" id="cards"></div>
+  </div>
 
-    <script src="./js/index.js"></script>
+  <script src="./js/index.js"></script>
 </body>
-
 </html>

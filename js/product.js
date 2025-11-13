@@ -140,7 +140,9 @@ const reviewsHTML = reviews.length
       id: data.id,
       title: data.title,
       price: data.price,
+      discount: data.discountPercentage,
       image: data.images[0],
+      ship: data.shippingInformation,
       quantity: 1
     });
     localStorage.setItem("cart", JSON.stringify(cart));

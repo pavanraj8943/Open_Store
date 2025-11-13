@@ -29,7 +29,6 @@ async function fetchData() {
   }
 }
 
-// Render products
 function renderProducts(products) {
   const container = document.getElementById("cards");
   container.innerHTML = products.map(ele => {
@@ -46,7 +45,7 @@ function renderProducts(products) {
             <span class="old-price">₹${oldPriceINR}</span>
             <span class="offer">${Math.round((1 - ele.price / (ele.price * 1.4)) * 100)}% off</span>
           </p>
-          <p>${ele.rating} ⭐</p>
+          <p class="star" >${ele.rating} <span> ★ </span> </p>
         </a>
       </div>
     `;
@@ -54,38 +53,38 @@ function renderProducts(products) {
 }
 
 
-function searchProducts(query) {
-  const filtered = allProducts.filter(p =>
-    p.title.toLowerCase().includes(query.toLowerCase())
-  );
-  renderProducts(filtered);
-}
+    function searchProducts(query) {
+    const filtered = allProducts.filter(p =>
+        p.title.toLowerCase().includes(query.toLowerCase())
+    );
+    renderProducts(filtered);
+    }
 
-async function filterByCategory(category) {
-  if (category === "All") {
-    renderProducts(allProducts);
-    return;
-  }
+    async function filterByCategory(category) {
+    if (category === "All") {
+        renderProducts(allProducts);
+        return;
+    }
 
-  try {
-    const res = await fetch(`https://dummyjson.com/products/category/${category}`);
-    const data = await res.json();
-    renderProducts(data.products);
-  } catch (error) {
-    console.error("Error filtering category:", error);
-  }
-}
+    try {
+        const res = await fetch(`https://dummyjson.com/products/category/${category}`);
+        const data = await res.json();
+        renderProducts(data.products);
+    } catch (error) {
+        console.error("Error filtering category:", error);
+    }
+    }
 
-document.getElementById("searchBtn").addEventListener("click", () => {
-  const query = document.getElementById("searchInput").value.trim();
-  searchProducts(query);
-});
+    document.getElementById("searchBtn").addEventListener("click", () => {
+    const query = document.getElementById("searchInput").value.trim();
+    searchProducts(query);
+    });
 
-document.getElementById("searchInput").addEventListener("input", (e) => {
-  const query = e.target.value.trim();
-  if (query === "") renderProducts(allProducts);
-  else searchProducts(query);
-});
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+    const query = e.target.value.trim();
+    if (query === "") renderProducts(allProducts);
+    else searchProducts(query);
+    });
 
 
 renderCategories();

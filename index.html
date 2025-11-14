@@ -10,19 +10,27 @@
 
 <body>
   <div class="main">
-    <nav>
-      <a href="#" class="logo">Open_STORE</a>
+<nav class="navbar">
+  <div class="nav-left">
+    <h1 class="logo">Open_Store</h1>
+  </div>
 
-      <div class="search-box">
-        <input id="searchInput" type="text" placeholder="Search products...">
-        <button id="searchBtn">Search</button>
-      </div>
+  <div class="nav-center">
+    <input type="text" id="searchInput" placeholder="Search for products..." />
+    <button id="searchBtn">Search</button>
+  </div>
 
-      <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Login</a>
-      </div>
-    </nav>
+  <div class="nav-right">
+    <button id="cartBtn" ><a href="./cart.html">🛒 Cart</a></button>
+    <button id="profileBtn">👤 Login</button>
+  </div>
+</nav>
+
+
+<div id="categories" class="category-bar"></div>
+
+<div id="cards" class="card-container"></div>
+
 
     <div id="categories" class="categories"></div>
 

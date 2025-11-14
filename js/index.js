@@ -46,6 +46,7 @@ function renderProducts(products) {
             <span class="offer">${Math.round((1 - ele.price / (ele.price * 1.4)) * 100)}% off</span>
           </p>
           <p class="star" >${ele.rating} <span> ★ </span> </p>
+          <p class="description">${ele.description}</p>
         </a>
       </div>
     `;

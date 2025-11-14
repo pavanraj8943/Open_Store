@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,26 @@
     <link rel="stylesheet" href="./css/product.css">
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 </head>
-<body>  <nav>
-            <a href="#" class="logo">Open_Store</a>
 
-            <div class="search-box">
-                <input type="text" placeholder="Search products...">
-                <button>Search</button>
-            </div>
-            <div class="nav-links">
-                <a href="./index.html">Home</a>
-                <a href="./cart.html">Cart</a>
-            </div>
-        </nav>
-      <div id="product" class="product-container">
-     
-      </div>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1 class="logo">Open_Store</h1>
+        </div>
+        <div class="nav-right">
+            <button id="cartBtn"><a href="./cart.html">🛒 Cart</a> <span id="cartCount"></span></button>
+            <button id="profileBtn"><a href="./index.html">Home</a></button>
+        </div>
+    </nav>
+    <div id="product" class="product-container">
+
+    </div>
 
 
-      
-     
+
+
 
     <script src="./js/product.js"></script>
 </body>
+
 </html>

@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart | Flipkart Style</title>
   <link rel="stylesheet" href="./css/cart.css">
 </head>
+
 <body>
 
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1 class="logo">Open_Store</h1>
+    </div>
+    <div class="nav-right">
+      <button id="cartBtn">🛒 Cart<span id="cartCount"></span></button>
+      <button id="profileBtn"><a href="./index.html">Home</a></button>
+    </div>
+  </nav>
   <div class="cart-wrapper">
-    <!-- Left section -->
     <div class="cart-left">
       <div id="cartItems" class="cartItems"></div>
     </div>
@@ -23,7 +33,7 @@
         </div>
         <div class="price-row">
           <span>Discount</span>
-          <span class="discount">− ₹0</span>
+          <span class="discount">− </span>
         </div>
         <div class="price-row">
           <span>Platform Fee</span>
@@ -34,7 +44,7 @@
           <strong>Total Amount</strong>
           <strong id="totalPrice">₹0</strong>
         </div>
-        <p class="savings" id="savingsText">You will save   on this order</p>
+        <p class="savings" id="savingsText">You will save on this order</p>
       </div>
       <button class="checkout-btn" onclick="checkout()">PLACE ORDER</button>
     </div>
@@ -42,4 +52,5 @@
 
   <script src="./js/cart.js"></script>
 </body>
+
 </html>
